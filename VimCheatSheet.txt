@@ -1,0 +1,60 @@
+### Scrolling
+Ctrl-E / -Y 		Scroll Up/Down without moving cursor
+Ctr-u / -d 		Scroll half a page (incl. cursor)
+zz zt zb 		Move current line to middle / top / bottom line of screen (attention: caps lock = save and exit)
+
+
+### General stuff
+di( delete within parenthesis
+ci( change within parenthesis
+
+<leader> = backslash
+v visuelle Auswahl
+:r Datei 		lese Datei an aktuelle Stelle ein
+:r !cmd 		lese Ausgabe von cmd an aktuelle Stelle ein
+### Copy to Clipboard ("+ is the system's clipboard as a register)
+"+y 			for yanking
+"+d			for deleting
+
+
+
+### Window management
+CTRL-w +/- </> 		Resize Window (maybe add num modifier before)
+CTRL-w n/v 		new horizontal / vertical Window
+:ter 			open terminal in current column
+CTRL-w w/p 		cycle forwards/backward through Windows 
+:tabedit		open a new tab
+
+### Search & Replace
+:#,#s/alt/neu/g  	wobei #,# die Zeilennummern des Bereiches sind, in dem die Ersetzung durchgeführt werden soll.
+:s/alt/neu/g 		globale Ersetzung von alt durch neu innerhalb dieser aktuellen Zeile
+			c hinzufügen: Frage bei jeder Ersetzung nach
+:%s/alt/neu/g 	globale Ersetzung von alt durch neu in der gesamten Datei
+
+### Jumping around
+gu<movement> 		uncapitalize to <movement>
+gU<movement> 		capitalize to <movement>
+gf 			open relative / absolute path in vim	/home/m_wolf37/reboots.txt
+CTRL-SHIFT-6 		exit gf
+gd			goto definition (CoC nvim)
+C-O			un-jump (go back to last position)
+% 			jump to matching parenthesis
+
+
+### CoC nvim
+<leader>ih 		toggle inlay hints (datatype annotations) in coc
+gd			goto definition
+
+
+### VimTex (LaTeX stuff)
+<leader>ll		LaTeX Compile start or stop (opens PDF, updates when .tex file is saved)
+<leader>lc		Clear auxiliary files
+
+
+### NERDTree
+C 			Set current selected folder as tree root
+cd			Set current selected folder as CWD
+CW			Change into CWD
+
+### CtrlP (fuzzy finder)
+Ctrl-p 			start fuzzy finder (search inside all child folders and maybe parents until hitting .git folder) 
