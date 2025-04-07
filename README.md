@@ -5,9 +5,8 @@
 
 ## Install plugins
 VIM: `:PlugInstall`
-CoC: ```
-    :CocInstall coc-clangd
-    :CocInstall coc-pyright
-    :CocInstall coc-tsserver
-    :CocInstall coc-vimtex
-    ```
+CoC: 
+- `:CocInstall coc-clangd`
+- `:CocInstall coc-pyright`
+- `:CocInstall coc-tsserver`
+- `:CocInstall coc-vimtex`
