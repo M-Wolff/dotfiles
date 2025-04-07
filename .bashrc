@@ -118,10 +118,6 @@ fi
 
 
 ######## Custom stuff (m_wolf37) ########
-# make rm less dangerous
-alias rm='rm -I'
-# alias for dotfiles git
-alias dotfiles=git --git-dir=$HOME/.dotfiles --work-tree=$HOME
 PATH="/home/m_wolf37/.local/bin:$PATH"
 PATH="$HOME/.local/bin/qemu-9.2.0/build:$PATH"
 PATH="$HOME/.local/bin/podman/bin/:$PATH"
