@@ -1,0 +1,11 @@
+# Das ist Gits benutzerspezifische Konfigurationsdatei.
+[user]
+# Bitte passen Sie die folgenden Zeilen an und kommentieren Sie diese aus:
+	name = Matthias Wolff
+	email = m_wolf37@uni-muenster.de
+	signingkey = E9A7BE2D16311D64
+[core]
+	editor = vim
+	sshCommand = ssh -i ~/.ssh/github_wolffgang
+[init]
+	defaultBranch = main
