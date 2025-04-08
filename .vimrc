@@ -1,9 +1,3 @@
-"TODO fix thix: ocercommandline ist ne separate command line != vim command
-"line....
-" enable vim-over replace-preview
-" autocmd VimEnter * OverCommandLine
-
-
 filetype plugin indent on " Switch indentation and plugin support on for each filetype
 syntax on " Enable Syntax-Highlighting
 set number " line numbers
@@ -41,10 +35,10 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " LaTeX compiling and auto-update of rendered PDF when saving *.tex file
 Plug 'lervag/vimtex'
-" Search and Replace preview
-Plug 'osyo-manga/vim-over'
 " Fuzzy Search
 Plug 'ctrlpvim/ctrlp.vim'
+" Find & Replace Highlighting and Preview 
+Plug 'markonm/traces.vim'
 call plug#end()
 " Set CtrlP root dir to r=nearest ancestor containing .git folder or
 " a=directory of current file (if not subdir of cwd)
