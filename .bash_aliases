@@ -7,4 +7,4 @@ alias shutdown='for i in {15..1}; do sleep 1 && echo "Shutting down in $i Second
 # make rm less dangerous
 alias rm='rm -I'
 # alias for dotfiles git
-alias dotfiles=git --git-dir=$HOME/.dotfiles --work-tree=$HOME
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
