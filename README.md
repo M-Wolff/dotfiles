@@ -10,3 +10,4 @@
     - `:CocInstall coc-pyright`
     - `:CocInstall coc-tsserver`
     - `:CocInstall coc-vimtex`
+    - `:CocInstall coc-python`

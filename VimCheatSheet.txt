@@ -15,6 +15,7 @@ v visuelle Auswahl
 ### Copy to Clipboard ("+ is the system's clipboard as a register)
 "+y 			for yanking
 "+d			for deleting
+dtX 			delete unTill X (X not included)
 
 
 
@@ -46,6 +47,7 @@ C-O			un-jump (go back to last position)
 ### CoC nvim
 <leader>ih 		toggle inlay hints (datatype annotations) in coc
 gd			goto definition
+<leader>r OR <C-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
 
 
 ### VimTex (LaTeX stuff)
