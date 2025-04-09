@@ -17,7 +17,11 @@ v visuelle Auswahl
 "+d			for deleting
 dtX 			delete unTill X (X not included)
 
-
+### Terminal stuff
+:ter 			open terminal
+:vert ter		open terminal in new vertical split
+Ctrl-W-n 		enter terminal normal mode (scroll, search, ... inside the terminal output)
+i			go back to terminal insert mode (i.e. enter a new command into the shell)
 
 ### Window management
 CTRL-w +/- </> 		Resize Window (maybe add num modifier before)
