@@ -17,6 +17,12 @@ nnoremap <C-h> :noh<CR>
 " <leader>ih toggles InlayHints (i.e. datatype hints, argument names, ... in
 " code; default=OFF)
 nnoremap <silent> <leader>ih :CocCommand document.toggleInlayHint<CR>
+" rename command (first one does NOT work in Vim, only NeoVim)
+"nmap <leader>r <Plug>(coc-rename)
+" Workaround for broken rename command (mainly the GUI popup is broken, bypass
+" it by giving the rename-to parameter using normal VIM input)
+nnoremap <leader>r :call CocAction('rename', input('Rename to: '))<CR>
+nnoremap <C-r> :call CocAction('rename', input('Rename to: '))<CR>
 " Ctrl-s saves currently opened file without quitting
 nnoremap <silent> <C-s> :w<CR>
 " jump to definition with gd (cursor on method name -> jump to definition of
@@ -25,7 +31,6 @@ nmap <silent> gd <Plug>(coc-definition)
 " make Shift-Tab do Tab to be able to do normal Tabs in insert mode again
 " (because regular Tab == Autocomplete CoC suggestion)
 inoremap <S-Tab> <Tab>
-
 " Loading Plugins
 call plug#begin()
 " catppuccin color scheme
@@ -62,7 +67,7 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 " ##############################################################################
-" Set Virtaul Environment for CoC accordingly to match current selected venv
+" Set Virtual Environment for CoC accordingly to match current selected venv
 " in shell that called Vim
 function! SetPythonPath()
     let venv = $VIRTUAL_ENV
