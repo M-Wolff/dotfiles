@@ -21,8 +21,12 @@ nnoremap <silent> <leader>ih :CocCommand document.toggleInlayHint<CR>
 "nmap <leader>r <Plug>(coc-rename)
 " Workaround for broken rename command (mainly the GUI popup is broken, bypass
 " it by giving the rename-to parameter using normal VIM input)
-nnoremap <leader>r :call CocAction('rename', input('Rename to: '))<CR>
-nnoremap <S-r> :call CocAction('rename', input('Rename to: '))<CR>
+" expand('<cword>') will set the word under cursor (i.e. the variable to
+" be renamed) as the default pre-typed entry for the input(...) function, so
+" one can just make small changes to the variable name without having to type
+" it out again from scratch
+nnoremap <leader>r :call CocAction('rename', input('Rename to: ', expand('<cword>')))<CR>
+nnoremap <S-r> :call CocAction('rename', input('Rename to: ', expand('<cword>')))<CR>
 " Ctrl-s saves currently opened file without quitting
 nnoremap <silent> <C-s> :w<CR>
 " jump to definition with gd (cursor on method name -> jump to definition of
