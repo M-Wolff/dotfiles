@@ -51,7 +51,7 @@ C-O			un-jump (go back to last position)
 ### CoC nvim
 <leader>ih 		toggle inlay hints (datatype annotations) in coc
 gd			goto definition
-<leader>r OR <C-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
+<leader>r OR <S-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
 
 
 ### VimTex (LaTeX stuff)
