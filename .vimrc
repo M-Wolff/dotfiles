@@ -22,7 +22,7 @@ nnoremap <silent> <leader>ih :CocCommand document.toggleInlayHint<CR>
 " Workaround for broken rename command (mainly the GUI popup is broken, bypass
 " it by giving the rename-to parameter using normal VIM input)
 nnoremap <leader>r :call CocAction('rename', input('Rename to: '))<CR>
-nnoremap <C-r> :call CocAction('rename', input('Rename to: '))<CR>
+nnoremap <S-r> :call CocAction('rename', input('Rename to: '))<CR>
 " Ctrl-s saves currently opened file without quitting
 nnoremap <silent> <C-s> :w<CR>
 " jump to definition with gd (cursor on method name -> jump to definition of
