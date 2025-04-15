@@ -13,6 +13,7 @@ v visuelle Auswahl
 :r Datei 		lese Datei an aktuelle Stelle ein
 :r !cmd 		lese Ausgabe von cmd an aktuelle Stelle ein
 ############################## Copy to Clipboard ###############################
+"+ is the system's clipboard as a register
 "+y 			for yanking
 "+d			for deleting
 dtX 			delete unTill X (X not included)
