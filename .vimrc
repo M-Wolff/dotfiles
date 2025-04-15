@@ -83,3 +83,28 @@ endfunction
 
 " Execute on VimEnter (when calling vim from shell)
 autocmd VimEnter * call SetPythonPath()
+
+" ############################### Seperator Block ##############################
+" this method generates a Seperator Block like the one directly above
+" i.e. line filles with '#' with text centered in the middle
+function! SeperatorText()
+  " Input Text
+  let input = input("Geben Sie den Text ein: ")
+  let line = getline(".")
+  let len = strlen(line)
+  " if input empty, just create a line full of '#'
+  if empty(input)
+    let padding = repeat("#", 40) " 40 because padding is added two times (total 80)
+    let new_line = padding. padding
+  else " otherwise: pad input with one space left and right and fill rest of the line with '#' symmetrically
+    let padding = repeat("#", (80 - strlen(input) - 2) / 2)
+    let new_line = padding. " ". input. " ". padding
+  endif
+  if strlen(new_line) < 80 " for odd numbers of input characters add one extra '#'
+    let new_line.= "#"
+  endif
+  " set current line (overwrite) to seperator block generated
+  call setline(".", new_line)
+endfunction
+
+nnoremap <silent> <Leader>l :call SeperatorText()<CR>
