@@ -11,3 +11,4 @@
     - `:CocInstall coc-tsserver`
     - `:CocInstall coc-vimtex`
     - `:CocInstall coc-python`
+    - `:CocInstall coc-vimlsp

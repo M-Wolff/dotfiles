@@ -1,10 +1,10 @@
-### Scrolling
+################################## Scrolling ###################################
 Ctrl-E / -Y 		Scroll Up/Down without moving cursor
 Ctr-u / -d 		Scroll half a page (incl. cursor)
 zz zt zb 		Move current line to middle / top / bottom line of screen (attention: caps lock = save and exit)
 
 
-### General stuff
+################################ General Stuff #################################
 di( delete within parenthesis
 ci( change within parenthesis
 
@@ -12,31 +12,31 @@ ci( change within parenthesis
 v visuelle Auswahl
 :r Datei 		lese Datei an aktuelle Stelle ein
 :r !cmd 		lese Ausgabe von cmd an aktuelle Stelle ein
-### Copy to Clipboard ("+ is the system's clipboard as a register)
+############################## Copy to Clipboard ###############################
 "+y 			for yanking
 "+d			for deleting
 dtX 			delete unTill X (X not included)
 
-### Terminal stuff
+################################ Terminal stuff ################################
 :ter 			open terminal
 :vert ter		open terminal in new vertical split
-Ctrl-W-n 		enter terminal normal mode (scroll, search, ... inside the terminal output)
+Ctrl-w-N 		enter terminal normal mode (scroll, search, ... inside the terminal output; the N *HAS* to be uppercase!)
 i			go back to terminal insert mode (i.e. enter a new command into the shell)
 
-### Window management
+############################## Window Management ###############################
 CTRL-w +/- </> 		Resize Window (maybe add num modifier before)
 CTRL-w n/v 		new horizontal / vertical Window
 :ter 			open terminal in current column
 CTRL-w w/p 		cycle forwards/backward through Windows 
 :tabedit		open a new tab
 
-### Search & Replace
+############################### Search & Replace ###############################
 :#,#s/alt/neu/g  	wobei #,# die Zeilennummern des Bereiches sind, in dem die Ersetzung durchgeführt werden soll.
 :s/alt/neu/g 		globale Ersetzung von alt durch neu innerhalb dieser aktuellen Zeile
 			c hinzufügen: Frage bei jeder Ersetzung nach
 :%s/alt/neu/g 	globale Ersetzung von alt durch neu in der gesamten Datei
 
-### Jumping around
+################################ Jumping around ################################
 gu<movement> 		uncapitalize to <movement>
 gU<movement> 		capitalize to <movement>
 gf 			open relative / absolute path in vim	/home/m_wolf37/reboots.txt
@@ -48,21 +48,25 @@ C-O			un-jump (go back to last position)
 % 			jump to matching parenthesis
 
 
-### CoC nvim
+################################### CoC nvim ###################################
 <leader>ih 		toggle inlay hints (datatype annotations) in coc
 gd			goto definition
 <leader>r OR <S-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
 
 
-### VimTex (LaTeX stuff)
+############################# VimTex (LaTeX stuff) #############################
 <leader>ll		LaTeX Compile start or stop (opens PDF, updates when .tex file is saved)
 <leader>lc		Clear auxiliary files
 
 
-### NERDTree
+################################### NERDTree ###################################
 C 			Set current selected folder as tree root
 cd			Set current selected folder as CWD
 CW			Change into CWD
 
-### CtrlP (fuzzy finder)
+############################# CtrlP (fuzzy finder) #############################
 Ctrl-p 			start fuzzy finder (search inside all child folders and maybe parents until hitting .git folder) 
+
+
+################################ Special Stuff #################################
+<leader>l 		insert seperator block (custom function)
