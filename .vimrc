@@ -86,7 +86,7 @@ autocmd VimEnter * call SetPythonPath()
 
 " ############################### Seperator Block ##############################
 " this method generates a Seperator Block like the one directly above
-" i.e. line filles with '#' with text centered in the middle
+" i.e. line filled with '#' with text centered in the middle
 function! SeperatorText()
   " Input Text
   let input = input("Geben Sie den Text ein: ")
