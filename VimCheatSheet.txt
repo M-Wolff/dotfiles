@@ -67,6 +67,10 @@ CW			Change into CWD
 
 ############################# CtrlP (fuzzy finder) #############################
 Ctrl-p 			start fuzzy finder (search inside all child folders and maybe parents until hitting .git folder) 
+Ctrl-b 			cycle modes (files, buffers, MRU)
+Ctrl-d 			switch betweetn filename / path matching
+Ctrl-e 			enable regex within search
+:CtrlP /new/root/path 	change CtrlP's new root path within which it searches for matches
 
 
 ################################ Special Stuff #################################
