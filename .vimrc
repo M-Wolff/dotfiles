@@ -35,6 +35,8 @@ nmap <silent> gd <Plug>(coc-definition)
 " make Shift-Tab do Tab to be able to do normal Tabs in insert mode again
 " (because regular Tab == Autocomplete CoC suggestion)
 inoremap <S-Tab> <Tab>
+
+nnoremap <C-m> <Plug>MarkdownPreviewToggle
 " Loading Plugins
 call plug#begin()
 " catppuccin color scheme
@@ -48,6 +50,8 @@ Plug 'lervag/vimtex'
 Plug 'ctrlpvim/ctrlp.vim'
 " Find & Replace Highlighting and Preview 
 Plug 'markonm/traces.vim'
+" Markdown Preview 
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && npx --yes yarn install'}
 call plug#end()
 " Set CtrlP root dir to r=nearest ancestor containing .git folder or
 " a=directory of current file (if not subdir of cwd)
