@@ -71,7 +71,7 @@ Ctrl-b 			cycle modes (files, buffers, MRU)
 Ctrl-d 			switch betweetn filename / path matching
 Ctrl-e 			enable regex within search
 :CtrlP /new/root/path 	change CtrlP's new root path within which it searches for matches
-
-
+################################### Markdown ###################################
+Ctrl-m 			Toggle Markdown Preview (opens browser windows with preview)
 ################################ Special Stuff #################################
 <leader>l 		insert seperator block (custom function)

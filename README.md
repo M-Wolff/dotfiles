@@ -3,6 +3,9 @@
 1. Define alias from .bash_aliases for `dotfiles`
 2. Clone Repository: `git clone --bare <Link-to-Repository> $HOME/.dotfiles`
 
+## Requirements
+- NodeJS (npm, ...) for Markdown Preview
+
 ## Install plugins
 - VIM: `:PlugInstall`
 - CoC (inside VIM): 
