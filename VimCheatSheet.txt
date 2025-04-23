@@ -47,6 +47,8 @@ CTRL-SHIFT-6 		exit gf
 gd			goto definition (CoC nvim)
 C-O			un-jump (go back to last position)
 % 			jump to matching parenthesis
+'<markername> 		jump to markername. Lowercase = within current file, Uppercase = global in potentially different file
+m<Markername> 		create a marker at current cursor position. Uppercase = global, Lowercase = local
 
 
 ################################### CoC nvim ###################################
