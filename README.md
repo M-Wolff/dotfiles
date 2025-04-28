@@ -5,6 +5,7 @@
 
 ## Requirements
 - NodeJS (npm, ...) for Markdown Preview
+- Install [vim-plug](https://github.com/junegunn/vim-plug) following their github's instructions
 
 ## Install plugins
 - VIM: `:PlugInstall`
@@ -14,4 +15,4 @@
     - `:CocInstall coc-tsserver`
     - `:CocInstall coc-vimtex`
     - `:CocInstall coc-python`
-    - `:CocInstall coc-vimlsp
+    - `:CocInstall coc-vimlsp`
