@@ -62,13 +62,8 @@ gd			goto definition
 <leader>lc		Clear auxiliary files
 daP 			delete everything inside current section
 [[ ]] [] ][ 		jump between sections
-############################## latex-snippets-vim ##############################
-see [ckunte/latex-snippets-vim](https://github.com/ckunte/latex-snippets-vim)
-fig<Tab>		figure block
-itm<Tab>		itemize block
-it<Tab> 		item
-enum<Tab> 		enumerate block
-beg<Tab>		begin block
+################################# coc-snippets #################################
+see ~/.vim/snippets/*.json for snippet definitions
 ################################### NERDTree ###################################
 C 			Set current selected folder as tree root
 cd			Set current selected folder as CWD
