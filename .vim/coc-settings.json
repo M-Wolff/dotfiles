@@ -1,5 +1,7 @@
 {
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/19.1.2/clangd_19.1.2/bin/clangd"
-  "suggest.enablePreselect": false
-  "inlayHint.display": false
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/19.1.2/clangd_19.1.2/bin/clangd",
+  "suggest.enablePreselect": false,
+  "inlayHint.display": false,
+  "snippets.priority": 99,
+  "snippets.userSnippetsDirectory": "~/.vim/snippets",
 }

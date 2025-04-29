@@ -52,11 +52,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'markonm/traces.vim'
 " Markdown Preview 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && npx --yes yarn install'}
-" UltiSnips Snippets for fast autocomplete and default templates to
-" automatically insert (i.e. class with docstring, ...)
-Plug 'SirVer/ultisnips'
-" LaTeX Snippets for UltiSnips
-Plug 'ckunte/latex-snippets-vim'
 call plug#end()
 " Set CtrlP root dir to r=nearest ancestor containing .git folder or
 " a=directory of current file (if not subdir of cwd)
