@@ -29,6 +29,7 @@ nnoremap <leader>r :call CocAction('rename', input('Rename to: ', expand('<cword
 nnoremap <S-r> :call CocAction('rename', input('Rename to: ', expand('<cword>')))<CR>
 " Ctrl-s saves currently opened file without quitting
 nnoremap <silent> <C-s> :w<CR>
+inoremap <silent> <C-s> <Esc>:w<CR>i
 " jump to definition with gd (cursor on method name -> jump to definition of
 " this method; even in different file)
 nmap <silent> gd <Plug>(coc-definition)
