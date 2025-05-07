@@ -35,7 +35,7 @@ CTRL-w w/p 		cycle forwards/backward through Windows
 :#,#s/alt/neu/g  	wobei #,# die Zeilennummern des Bereiches sind, in dem die Ersetzung durchgeführt werden soll.
 :s/alt/neu/g 		globale Ersetzung von alt durch neu innerhalb dieser aktuellen Zeile
 			c hinzufügen: Frage bei jeder Ersetzung nach
-:%s/alt/neu/g 	globale Ersetzung von alt durch neu in der gesamten Datei
+:%s/alt/neu/g 		globale Ersetzung von alt durch neu in der gesamten Datei
 
 ################################ Jumping around ################################
 gu<movement> 		uncapitalize to <movement>
