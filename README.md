@@ -4,6 +4,7 @@
 2. Clone Repository: `git clone --bare <Link-to-Repository> $HOME/.dotfiles`
 
 ## Requirements
+- tmux
 - NodeJS (npm, ...) for Markdown Preview
 - Install [vim-plug](https://github.com/junegunn/vim-plug) following their github's instructions
 
