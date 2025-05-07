@@ -27,9 +27,11 @@ nnoremap <silent> <leader>ih :CocCommand document.toggleInlayHint<CR>
 " it out again from scratch
 nnoremap <leader>r :call CocAction('rename', input('Rename to: ', expand('<cword>')))<CR>
 nnoremap <S-r> :call CocAction('rename', input('Rename to: ', expand('<cword>')))<CR>
+nnoremap <leader>d :call CocAction('doHover')<CR>
+nnoremap <leader>f :call CocAction('format')<CR>
 " Ctrl-s saves currently opened file without quitting
 nnoremap <silent> <C-s> :w<CR>
-inoremap <silent> <C-s> <Esc>:w<CR>i
+inoremap <silent> <C-s> <Esc>:w<CR>
 " jump to definition with gd (cursor on method name -> jump to definition of
 " this method; even in different file)
 nmap <silent> gd <Plug>(coc-definition)
