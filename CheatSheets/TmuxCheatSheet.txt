@@ -1,0 +1,25 @@
+! Keep in mind that <Ctrl>b has been remapped to <Ctrl>a for better reachability !
+############################## Handling Sessions ###############################
+tmux -s <session name> / tmux 		open a new session
+<Ctrl>a d 					close session (detach)
+tmux a(ttach) [-t <name>]		re-attach to an existing session
+<Ctrl>a $ 					rename session
+
+############################### Handling Windows ###############################
+<Ctrl>a c 					create new window
+<Ctrl>a {1,2,3,...} 			GoTo window number
+<Ctrl>a w 					close current window
+<Ctrl>a l 					GoTo last active window
+
+################################ Handling Panes ################################
+<Ctrl>a " 					split horizontally (create new pane)
+<Ctrl>a % 					split vertically (create new pane)
+<Ctrl>a <Arrow-Keys> 			move between panes
+	hold down arrow keys 		resize pane
+<Ctrl>a z 					zoom / unzoom to current pane
+<Ctrl>a { / } 				move current pane to left / right
+<Ctrl>a ! 					convert pane into window
+<Ctrl>a x 					close current pane
+##################################### Misc #####################################
+<Ctrl>a : 					enter command mode
+
