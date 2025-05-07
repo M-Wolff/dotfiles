@@ -55,6 +55,8 @@ m<Markername> 		create a marker at current cursor position. Uppercase = global, 
 <leader>ih 		toggle inlay hints (datatype annotations) in coc
 gd			goto definition
 <leader>r OR <S-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
+<leader>d 		Show definition and docstring for method under cursor
+<leader>f 		reformat the file (indentations, ...)
 
 
 ############################# VimTex (LaTeX stuff) #############################
