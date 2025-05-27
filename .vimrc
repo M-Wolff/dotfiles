@@ -60,6 +60,9 @@ call plug#end()
 " a=directory of current file (if not subdir of cwd)
 let g:ctrlp_working_path_mode = 'ra'
 colorscheme catppuccin_mocha " Select mocha theme from catppuccin (after Plugin is loaded)
+" Buffer Type 'Quick Fix' set LineNr to a more readable color (not the same as
+" background...)
+autocmd FileType qf highlight LineNr ctermfg=yellow guifg=#fab387
 
 " ##############################################################################
 " Tab Autocomplete Key for CoC
