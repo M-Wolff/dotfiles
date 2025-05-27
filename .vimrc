@@ -59,6 +59,10 @@ call plug#end()
 " Set CtrlP root dir to r=nearest ancestor containing .git folder or
 " a=directory of current file (if not subdir of cwd)
 let g:ctrlp_working_path_mode = 'ra'
+" Ignore LaTeX-specific files that will never be edited anyways
+let g:ctrlp_custom_ignore = {
+      \ 'file': '\v\.(aux|log|bbl|blg|out|toc|lof|lot|fls|fdb_latexmk|gz|pdf|nav|snm|bcf)$'
+      \ }
 colorscheme catppuccin_mocha " Select mocha theme from catppuccin (after Plugin is loaded)
 " Buffer Type 'Quick Fix' set LineNr to a more readable color (not the same as
 " background...)
