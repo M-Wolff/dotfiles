@@ -62,6 +62,7 @@ gd			goto definition
 ############################# VimTex (LaTeX stuff) #############################
 <leader>ll		LaTeX Compile start or stop (opens PDF, updates when .tex file is saved)
 <leader>lc		Clear auxiliary files
+<leader>lt 		show ToC for easier jumping
 daP 			delete everything inside current section
 [[ ]] [] ][ 		jump between sections
 ################################# coc-snippets #################################
