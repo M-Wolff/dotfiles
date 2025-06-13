@@ -11,6 +11,7 @@ tmux a(ttach) [-t <name>]		re-attach to an existing session
 <Ctrl>a w 				close current window
 <Ctrl>a l 				GoTo last active window
 <Ctrl>a , 				rename window
+<Ctrl>a . 				assign new number to window (move window)
 
 ################################ Handling Panes ################################
 <Ctrl>a " 				split horizontally (create new pane)
