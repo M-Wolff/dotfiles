@@ -57,6 +57,7 @@ gd			goto definition
 <leader>r OR <S-r>	rename variable under cursor (workaround for broken <Plug>(coc-rename) )
 <leader>d 		Show definition and docstring for method under cursor
 <leader>f 		reformat the file (indentations, ...)
+Ctrl-j / Ctrl-k 		Jump in Snippet Completion to next / previous placeholder
 
 
 ############################# VimTex (LaTeX stuff) #############################
@@ -66,7 +67,7 @@ gd			goto definition
 daP 			delete everything inside current section
 [[ ]] [] ][ 		jump between sections
 ################################# coc-snippets #################################
-see ~/.vim/snippets/*.json for snippet definitions
+see ~/.vim/snippets/README.md for snippet definitions
 ################################### NERDTree ###################################
 C 			Set current selected folder as tree root
 cd			Set current selected folder as CWD
