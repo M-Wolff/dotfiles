@@ -12,6 +12,7 @@ ci( change within parenthesis
 v visuelle Auswahl
 :r Datei 		lese Datei an aktuelle Stelle ein
 :r !cmd 		lese Ausgabe von cmd an aktuelle Stelle ein
+CTRL-l 			toggle line numbers (number, relative, off)
 ############################## Copy to Clipboard ###############################
 "+ is the system's clipboard as a register
 "+y 			for yanking

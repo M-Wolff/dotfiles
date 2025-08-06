@@ -25,3 +25,9 @@ tmux a(ttach) [-t <name>]		re-attach to an existing session
 ##################################### Misc #####################################
 <Ctrl>a : 				enter command mode
 <Ctrl>a [ 				enter copy mode
+################################## Copy-Mode ###################################
+<Ctrl>a <Enter> 			enter copy mode
+press space to start selecting
+copy selection with enter
+move to other window
+<Ctrl>a p 				paste into current line
