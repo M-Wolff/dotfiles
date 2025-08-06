@@ -3,5 +3,4 @@
   "suggest.enablePreselect": false,
   "inlayHint.display": false,
   "snippets.priority": 99,
-  "snippets.userSnippetsDirectory": "~/.vim/snippets",
 }
