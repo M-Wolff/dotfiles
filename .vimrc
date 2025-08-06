@@ -37,9 +37,6 @@ inoremap <silent> <C-s> <Esc>:w<CR>
 " jump to definition with gd (cursor on method name -> jump to definition of
 " this method; even in different file)
 nmap <silent> gd <Plug>(coc-definition)
-" make Shift-Tab do Tab to be able to do normal Tabs in insert mode again
-" (because regular Tab == Autocomplete CoC suggestion)
-inoremap <S-Tab> <Tab>
 
 nnoremap <C-m> <Plug>MarkdownPreviewToggle
 " Loading Plugins
@@ -71,22 +68,29 @@ colorscheme catppuccin_mocha " Select mocha theme from catppuccin (after Plugin 
 " Buffer Type 'Quick Fix' set LineNr to a more readable color (not the same as
 " background...)
 autocmd FileType qf highlight LineNr ctermfg=yellow guifg=#fab387
+" Disable UltiSnips default tab mappings
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 " ##############################################################################
 " Tab Autocomplete Key for CoC
 " CheckBackspace() checks if cursor is at line beginning or after space
- function! CheckBackspace() abort
-   let col = col('.') - 1
-     return !col || getline('.')[col - 1]  =~# '\s'
-     endfunction
-" use <Tab> to confirm currently selected autocompletion
-" If CheckBackspace() is false, do regular tab instead
-" if autocomplete suggestion menu was not visible AND CheckBackspace is False,
-" then CoC will refresh autocompletion menu (i.e. open it)
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#confirm() :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] =~# '\s'
+endfunction
 
+" Tab: confirm completion, expand snippets, or fallback
+inoremap <silent><expr> <Tab>
+  \ coc#pum#visible() ? coc#pum#confirm() :
+  \ coc#expandable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand', ''])\<CR>" :
+  \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetNext', [])\<CR>" :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
+
+" Shift-Tab: go to previous snippet placeholder
+inoremap <silent><expr> <S-Tab>
+  \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetPrev', [])\<CR>" : "\<Tab>"
 " ##############################################################################
 " Set Virtual Environment for CoC accordingly to match current selected venv
 " in shell that called Vim
