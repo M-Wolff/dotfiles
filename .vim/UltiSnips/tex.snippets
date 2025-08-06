@@ -87,7 +87,7 @@ $0
 endsnippet
 
 snippet sec "section{} and label{}" b
-\section{${1:SecName}} % (fold)
+\section{${1:SecName}}
 \label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
 
 $0
@@ -96,7 +96,7 @@ $0
 endsnippet
 
 snippet sub "subsection{} and label" b
-\subsection{${1:SubName}} % (fold)
+\subsection{${1:SubName}}
 \label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
 
 $0
@@ -105,7 +105,7 @@ $0
 endsnippet
 
 snippet subs "subsubsection{} and label" b
-\subsubsection{${1:SubsubName}} % (fold)
+\subsubsection{${1:SubsubName}}
 \label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
 
 $0
@@ -246,4 +246,26 @@ snippet enum "Enumerate list (animated)" b
 \begin{enumerate}[<+->]
   \item $1
 \end{enumerate}
+endsnippet
+######################## Table Row with variable Width #########################
+global !p
+def create_row_placeholders(snip):
+    # retrieving single line from current string and treat it like tabstops
+    # count
+    placeholders_amount = int(snip.buffer[snip.line].strip())
+
+    # erase current line
+    snip.buffer[snip.line] = ''
+
+    # create anonymous snippet with expected content and number of tabstops
+    anon_snippet_body = ' & '.join(['$' + str(i+1)
+                                    for i in range(placeholders_amount)])
+
+    # expand anonymous snippet
+    snip.expand_anon(anon_snippet_body)
+endglobal
+
+post_jump "create_row_placeholders(snip)"
+snippet "tr(\d+)" "latex table row variable" br
+`!p snip.rv = match.group(1)`
 endsnippet
