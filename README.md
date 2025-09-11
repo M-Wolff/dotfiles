@@ -17,3 +17,5 @@
     - `:CocInstall coc-vimtex`
     - `:CocInstall coc-python`
     - `:CocInstall coc-vimlsp`
+    - `:CocInstall coc-snippets`
+    - `:CocInstall coc-java`
