@@ -3,4 +3,8 @@
   "suggest.enablePreselect": false,
   "inlayHint.display": false,
   "snippets.priority": 99,
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories":[
+	  "~/.vim/UltiSnips"
+  ]
 }
