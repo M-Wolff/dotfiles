@@ -6,6 +6,7 @@
 ## Requirements
 - tmux
 - NodeJS (npm, ...) for Markdown Preview
+- npm install -g yarn
 - Install [vim-plug](https://github.com/junegunn/vim-plug) following their github's instructions
 
 ## Install plugins
