@@ -6,7 +6,8 @@
 	signingkey = E9A7BE2D16311D64
 [core]
 	editor = vim
-	sshCommand = ssh -i ~/.ssh/github_wolffgang
 	autocrlf = input
 [init]
 	defaultBranch = main
+[commit]
+	gpgSign = true
