@@ -118,6 +118,7 @@ fi
 
 
 ######## Custom stuff (m_wolf37) ########
+. ~/custom.bashrc
 PATH="/home/m_wolf37/.local/bin:$PATH"
 PATH="$HOME/.local/bin/qemu-9.2.0/build:$PATH"
 PATH="$HOME/.local/bin/podman/bin/:$PATH"
@@ -128,5 +129,3 @@ PATH="$HOME/.local/bin/syncthing:$PATH"
 PATH="/home/m_wolf37/.local/bin/nodejs-latest-install/node-v22.14.0-linux-x64/bin:$PATH"
 PATH="/home/m_wolf37/tools/ollama/bin:$PATH"
 PATH="/home/m_wolf37/.local/bin/vim_src/src:$PATH"
-# Activate advanced and programmable autcompletion for all kinds of commands
-source /etc/bash_completion
