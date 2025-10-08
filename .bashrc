@@ -118,4 +118,4 @@ fi
 
 
 ######## Custom stuff (m_wolf37) ########
-. ~/custom.bashrc
+. ~/.bashrc_custom
