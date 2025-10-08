@@ -8,6 +8,9 @@
 - NodeJS (npm, ...) for Markdown Preview
 - npm install -g yarn
 - Install [vim-plug](https://github.com/junegunn/vim-plug) following their github's instructions
+##
+- create file for individual additions to .bashrc in `~/.bashrcs_custom/<PCName>.bashrc`
+- link to correct device-specific file: `ln ~/.bashrcs_custom/<PCName>.bashrc ~/custom.bashrc`
 
 ## Install plugins
 - VIM: `:PlugInstall`
