@@ -6,9 +6,6 @@ alias py='python3'
 alias shutdown='for i in {15..1}; do sleep 1 && echo "Shutting down in $i Seconds!"; done && sudo shutdown now'
 # make rm less dangerous
 alias rm='rm -I'
-# ToDo list
-alias todo="vim ~/Sciebo/ToDos.md"
-alias todos=todo
 # alias for dotfiles git
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 

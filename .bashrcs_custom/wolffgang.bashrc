@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
-# .bashrc additions for work PC "Wolffgang"
+# .bashrc additions for work PC "Wolffgang
+alias todo="vim ~/Sciebo/ToDos.md"
+
 PATH="/home/m_wolf37/.local/bin:$PATH"
 PATH="$HOME/.local/bin/qemu-9.2.0/build:$PATH"
 PATH="$HOME/.local/bin/podman/bin/:$PATH"
