@@ -3,8 +3,9 @@ export PATH="$PATH:/home/matthias/.local/bin"
 
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: nvme0 nvme1 nvme2 sda sdb'
+alias drivestats='sudo smartctl -a'
 alias todo='vim ~/Schreibtisch/todo.txt'
-alias unitodo="vim ~/Sciebo/ToDos.md"
+alias unitodo="vim ~/Sciebo/Uni-Muenster-Sciebo/ToDos.md"
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
