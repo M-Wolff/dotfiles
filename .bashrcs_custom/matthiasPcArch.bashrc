@@ -6,6 +6,12 @@ alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{}
 alias drivestats='sudo smartctl -a'
 alias todo='vim ~/Schreibtisch/todo.txt'
 alias unitodo="vim ~/Sciebo/Uni-Muenster-Sciebo/ToDos.md"
+alias reflector_update="sudo reflector \
+  --country DE \
+  --latest 10 \
+  --protocol https \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist"
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
