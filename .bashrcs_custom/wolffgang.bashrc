@@ -10,3 +10,9 @@ PATH="$HOME/.local/bin/syncthing:$PATH"
 PATH="/home/m_wolf37/.local/bin/nodejs-latest-install/node-v22.14.0-linux-x64/bin:$PATH"
 PATH="/home/m_wolf37/tools/ollama/bin:$PATH"
 PATH="/home/m_wolf37/.local/bin/vim_src/src:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f "/home/m_wolf37/.ghcup/env" ] && . "/home/m_wolf37/.ghcup/env" # ghcup-env
