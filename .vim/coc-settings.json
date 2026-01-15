@@ -6,5 +6,6 @@
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.directories":[
 	  "~/.vim/UltiSnips"
-  ]
+  ],
+  "snippets.ultisnips.pythonPrompt": false,
 }

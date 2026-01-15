@@ -84,3 +84,5 @@ Ctrl-e 			enable regex within search
 Ctrl-m 			Toggle Markdown Preview (opens browser windows with preview)
 ################################ Special Stuff #################################
 <leader>l 		insert seperator block (custom function)
+##################################### JSON #####################################
+:%!jq . 		format current file as JSON (but don't save changes yet)
