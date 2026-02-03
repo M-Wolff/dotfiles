@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 # .bashrc additions for work PC "Wolffgang
 alias todo="vim ~/Sciebo/ToDos.md"
+alias shutdown='for i in {15..1}; do sleep 1 && echo "Shutting down in $i Seconds!"; done && sudo shutdown now'
+alias reboot='for i in {15..1}; do sleep 1 && echo "Rebooting in $i Seconds!"; done && sudo reboot'
+
 
 PATH="/home/m_wolf37/.local/bin:$PATH"
 PATH="$HOME/.local/bin/qemu-9.2.0/build:$PATH"
