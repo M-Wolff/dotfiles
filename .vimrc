@@ -70,19 +70,13 @@ colorscheme catppuccin_mocha " Select mocha theme from catppuccin (after Plugin 
 autocmd FileType qf highlight LineNr ctermfg=yellow guifg=#fab387
 " ##############################################################################
 " Tab Autocomplete Key for CoC
-function! CheckBackspace() abort
-	return 1
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1] =~# '\s'
-endfunction
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:UltiSnipsJumpForwardTrigger = "<nop>"
 let g:UltiSnipsJumpBackwardTrigger = "<nop>"
 " Tab for Snippet execution & normal Tab elsewhere
 inoremap <silent><expr> <Tab>
   \ coc#pum#visible() ? coc#pum#confirm() :
-  \ CheckBackspace() ? "\<Tab>" :
-  \ coc#refresh()
+  \ "\<Tab>"
 " Shift-Tab for Jumping
 inoremap <silent><expr> <S-Tab>
   \ coc#jumpable() ?
