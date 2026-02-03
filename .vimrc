@@ -68,29 +68,29 @@ colorscheme catppuccin_mocha " Select mocha theme from catppuccin (after Plugin 
 " Buffer Type 'Quick Fix' set LineNr to a more readable color (not the same as
 " background...)
 autocmd FileType qf highlight LineNr ctermfg=yellow guifg=#fab387
-" Disable UltiSnips default tab mappings
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 " ##############################################################################
 " Tab Autocomplete Key for CoC
-" CheckBackspace() checks if cursor is at line beginning or after space
 function! CheckBackspace() abort
+	return 1
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
-
-" Tab: confirm completion, expand snippets, or fallback
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:UltiSnipsJumpForwardTrigger = "<nop>"
+let g:UltiSnipsJumpBackwardTrigger = "<nop>"
+" Tab for Snippet execution & normal Tab elsewhere
 inoremap <silent><expr> <Tab>
   \ coc#pum#visible() ? coc#pum#confirm() :
-  \ coc#expandable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand', ''])\<CR>" :
-  \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetNext', [])\<CR>" :
   \ CheckBackspace() ? "\<Tab>" :
   \ coc#refresh()
-
-" Shift-Tab: go to previous snippet placeholder
+" Shift-Tab for Jumping
 inoremap <silent><expr> <S-Tab>
-  \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetPrev', [])\<CR>" : "\<Tab>"
+  \ coc#jumpable() ?
+  \ "\<C-r>=coc#rpc#request('snippetNext', [])\<CR>" :
+  \ "\<S-Tab>"
+
+
+
 " ##############################################################################
 " Set Virtual Environment for CoC accordingly to match current selected venv
 " in shell that called Vim
@@ -141,3 +141,6 @@ function! ToggleLineNumbers()
 
 " make seperator block
 nnoremap <silent> <Leader>l :call SeperatorText()<CR>
+" ############################ VimTeX autoindent fix #############################
+autocmd FileType tex setlocal indentexpr=
+autocmd FileType tex setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
