@@ -11,3 +11,5 @@
 	defaultBranch = main
 [commit]
 	gpgSign = true
+[pull]
+	rebase = false
