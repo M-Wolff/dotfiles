@@ -1,6 +1,7 @@
 # Created by `pipx` on 2025-10-07 21:54:21
 export PATH="$PATH:/home/matthias/.local/bin"
 
+alias vim='nvim'
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: nvme0 nvme1 nvme2 sda sdb'
 alias drivestats='sudo smartctl -a'
