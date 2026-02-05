@@ -116,6 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+umask 0077
 ######## Custom stuff (m_wolf37) ########
 . ~/.bashrc_custom
