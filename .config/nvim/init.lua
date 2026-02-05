@@ -42,27 +42,32 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-require("lua.matthias.plugins.catppuccin"),
-require("lua.matthias.plugins.telescope"),
-require("lua.matthias.plugins.treesitter"),
-require("lua.matthias.plugins.luasnip"),
-require("lua.matthias.plugins.mason"),
-require("lua.matthias.plugins.mason-lspconfig"),
-require("lua.matthias.plugins.markdown-preview"),
-require("lua.matthias.plugins.nvim-cmp"),
-require("lua.matthias.plugins.oil"),
-require("lua.matthias.plugins.vimtex"),
+require("matthias.plugins.autopairs"),
+require("matthias.plugins.catppuccin"),
+require("matthias.plugins.comment"),
+require("matthias.plugins.harpoon"),
+require("matthias.plugins.luasnip"),
+require("matthias.plugins.mason"),
+require("matthias.plugins.mason-lspconfig"),
+require("matthias.plugins.markdown-preview"),
+require("matthias.plugins.nvim-cmp"),
+require("matthias.plugins.oil"),
+require("matthias.plugins.surround"),
+require("matthias.plugins.tabout"),
+require("matthias.plugins.telescope"),
+require("matthias.plugins.treesitter"),
+require("matthias.plugins.vimtex"),
 })
 
 
 -- ############################### Custom-Commands ################################
-require("lua.matthias.commands.TSInfo")  -- :TSInfo for treesitter info (filetype)
-require("lua.matthias.commands.SeperatorLine")  -- create Seperator Line
-require("lua.matthias.commands.ToggleLineNumbers")  -- toggle line numbers (relative, absolute, off)
+require("matthias.commands.TSInfo")  -- :TSInfo for treesitter info (filetype)
+require("matthias.commands.SeperatorLine")  -- create Seperator Line
+require("matthias.commands.ToggleLineNumbers")  -- toggle line numbers (relative, absolute, off)
 
 -- ################################ Custom-Keymaps ################################
 -- this must be loaded as last position after everything else
-require("lua.matthias.keymaps/custom")
-require("lua.matthias.keymaps/lsp")
+require("matthias.keymaps/custom")
+require("matthias.keymaps/lsp")
 
 
