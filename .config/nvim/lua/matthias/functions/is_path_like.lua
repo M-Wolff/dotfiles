@@ -1,4 +1,8 @@
 function is_path_like(text)
+    -- don't autocomplete after a space
+    if text == "" or text:match("%s$") then
+        return false
+    end
     -- Absolute path: starts with / or ~
     if text:match("^[/~]") then
         return true
