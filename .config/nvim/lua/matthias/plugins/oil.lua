@@ -79,7 +79,7 @@ config = function()
             end,
         },
     }
-    vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", {desc="Start oil in parent directory"})
+    vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", {desc="Start oil in parent directory"})
 end,
 }
 

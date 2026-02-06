@@ -73,7 +73,6 @@ see ~/.vim/snippets/README.md for snippet definitions
 C 			Set current selected folder as tree root
 cd			Set current selected folder as CWD
 CW			Change into CWD
-
 ############################# CtrlP (fuzzy finder) #############################
 Ctrl-p 			start fuzzy finder (search inside all child folders and maybe parents until hitting .git folder) 
 Ctrl-b 			cycle modes (files, buffers, MRU)
@@ -86,3 +85,30 @@ Ctrl-m 			Toggle Markdown Preview (opens browser windows with preview)
 <leader>l 		insert seperator block (custom function)
 ##################################### JSON #####################################
 :%!jq . 		format current file as JSON (but don't save changes yet)
+##################################### Oil ######################################
+<leader>-       Start oil in parent directory
+-               Goto parent directory
+<C-p>           Preview file
+gs              Change sort
+g.              Toggle hidden
+g\              Toggle trash
+################################### Comment ####################################
+gcc             Comment current line
+gc              Visual Mode comment selection line-wise
+gb              Visual Mode comment selection block-wise
+################################## Telescope ###################################
+<leader>ff      fuzzy find in current cwd
+<leader>fg      grep current cwd
+<leader>fb      fuzzy find currently opened buffers
+<leader>fc      fuzzy find in neovim config directory
+################################### Harpoon ####################################
+<leader>h       Show Harpoon List (editable like a buffer)
+<leader><Left>  goto previous entry
+<leader><Right>  goto next entry
+<leader>1 2 3 4 5 6 7 9  Jump to entry number 1 2 3 4 5 6 7 8 9 in list
+################################### Surround ###################################
+sa<motion><sym>        surround visual selection / motion with <sym>
+sd<sym>         delete <sym> around selection / motion
+sr<sym_old><sym_new>         replace <sym_old> around selection with <sym_new>
+sh<sym>         highlight <sym> surrounding
+# Keep in mind that ( [ { will cause whitespace around surrounding, } ] ) will not.
