@@ -5,14 +5,18 @@
 
 ## Requirements
 - tmux
+
+### NeoVim
+- `ripgrep` (fuzzy find in telescope)
+- `tree-sitter-cli` (CLI interface for treesitter)
+- \[Haskell Language Server\]
+---
+### Vim (Legacy)
 - NodeJS (npm, ...) for Markdown Preview
 - npm install -g yarn
 - Install [vim-plug](https://github.com/junegunn/vim-plug) following their github's instructions
-## Add custom stuff to default `.bashrc`
-- create file for individual additions to .bashrc in `~/.bashrcs_custom/<PCName>.bashrc`
-- link to correct device-specific file: `ln ~/.bashrcs_custom/<PCName>.bashrc ~/.bashrc_custom`
 
-## Install plugins
+#### Install plugins
 - VIM: `:PlugInstall`
 - CoC (inside VIM): 
     - `:CocInstall coc-clangd`
@@ -23,3 +27,8 @@
     - `:CocInstall coc-vimlsp`
     - `:CocInstall coc-snippets`
     - `:CocInstall coc-java`
+---
+## Add custom stuff to default `.bashrc`
+- create file for individual additions to .bashrc in `~/.bashrcs_custom/<PCName>.bashrc`
+- link to correct device-specific file: `ln ~/.bashrcs_custom/<PCName>.bashrc ~/.bashrc_custom`
+
