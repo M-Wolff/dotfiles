@@ -69,5 +69,6 @@ require("matthias.commands.ToggleLineNumbers")  -- toggle line numbers (relative
 -- this must be loaded as last position after everything else
 require("matthias.keymaps/custom")
 require("matthias.keymaps/lsp")
+require("matthias.keymaps/tab")
 
 
