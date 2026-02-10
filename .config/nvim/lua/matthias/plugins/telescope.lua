@@ -10,7 +10,24 @@ return {
             require("telescope").setup({
                 defaults = {
                     -- Ignore these folders when searching
-                    file_ignore_patterns = {"node_modules", ".git/"},
+                    file_ignore_patterns = {
+                        "node_modules",
+                        ".git/",
+                        "%.aux$",
+                        "%.bbl$",
+                        "%.blg$",
+                        "%.fls$",
+                        "%.fdb_latexmk$",
+                        "%.out$",
+                        "%.synctex%.gz$",
+                        "%.toc$",
+                        "%.pdf$",
+                        "%.nav$",
+                        "%.vrb$",
+                        "%.snm$",
+                        "%.png$",
+                        "%.jpg$",
+                    },
                 },
                 extensions = {
                     fzf={}
