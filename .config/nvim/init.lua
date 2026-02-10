@@ -57,6 +57,7 @@ require("matthias.plugins.tabout"),
 require("matthias.plugins.telescope"),
 require("matthias.plugins.treesitter"),
 require("matthias.plugins.vimtex"),
+{'ThePrimeagen/vim-be-good'}
 })
 
 
