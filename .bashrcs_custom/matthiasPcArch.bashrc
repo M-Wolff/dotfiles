@@ -1,5 +1,7 @@
 # Created by `pipx` on 2025-10-07 21:54:21
 export PATH="$PATH:/home/matthias/.local/bin"
+# GHCi Haskell
+[ -f "/home/matthias/.ghcup/env" ] && . "/home/matthias/.ghcup/env" # ghcup-env
 
 alias vim='nvim'
 # Command for drivehealth
