@@ -1,11 +1,20 @@
 # Created by `pipx` on 2025-10-07 21:54:21
 export PATH="$PATH:/home/matthias/.local/bin"
+# GHCi Haskell
+[ -f "/home/matthias/.ghcup/env" ] && . "/home/matthias/.ghcup/env" # ghcup-env
 
+alias vim='nvim'
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: nvme0 nvme1 nvme2 sda sdb'
 alias drivestats='sudo smartctl -a'
 alias todo='vim ~/Schreibtisch/todo.txt'
 alias unitodo="vim ~/Sciebo/Uni-Muenster-Sciebo/ToDos.md"
+alias reflector_update="sudo reflector \
+  --country DE \
+  --latest 10 \
+  --protocol https \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist"
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
