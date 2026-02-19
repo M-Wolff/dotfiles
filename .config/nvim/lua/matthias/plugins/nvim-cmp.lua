@@ -25,7 +25,7 @@ return{
                 ["<Up>"] = cmp.mapping.select_prev_item(),
                 ["<C-n>"] = cmp.mapping.select_next_item(),
                 ["<C-p>"] = cmp.mapping.select_prev_item(),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Enter to confirm
+                -- ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Enter to confirm
             }),
             -- Sources for completion
             sources = cmp.config.sources({
