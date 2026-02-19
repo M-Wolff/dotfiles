@@ -6,6 +6,8 @@ alias todo="vim ~/Sciebo/ToDos.md"
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
 
+[ -f "/home/matthias/.ghcup/env" ] && . "/home/matthias/.ghcup/env" # ghcup-env
+
 function start_agent {
     echo "Starting new SSH agent..."
     (umask 077; ssh-agent > "$SSH_ENV")
