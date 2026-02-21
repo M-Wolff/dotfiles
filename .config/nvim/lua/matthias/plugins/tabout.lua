@@ -2,12 +2,12 @@
 return {
   {
     'abecodes/tabout.nvim',
-    lazy = false,
     config = function()
       require('tabout').setup {
-        tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
+        -- tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
+        tabkey = '', -- Disable tabout re-mapping of tab (cmp-nvim owns tab mapping)
         backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
-        act_as_tab = true, -- shift content if tab out is not possible
+        act_as_tab = false, -- shift content if tab out is not possible
         act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
         default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
         default_shift_tab = '<C-d>', -- reverse shift default action,
@@ -30,9 +30,7 @@ return {
       "L3MON4D3/LuaSnip",
       "hrsh7th/nvim-cmp"
     },
-    opt = true,  -- Set this to true if the plugin is optional
     event = 'InsertCharPre', -- Set the event to 'InsertCharPre' for better compatibility
-    priority = 1000,
   },
 }
 
