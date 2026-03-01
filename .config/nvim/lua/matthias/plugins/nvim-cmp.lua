@@ -17,9 +17,7 @@ return{
             -- Key mappings for completion menu
             mapping = cmp.mapping.preset.insert({
                 ["<Tab>"] = cmp.mapping(function(fallback)
-                    if require("tabout").taboutMulti() then
-                        return
-                    elseif cmp.visible() then
+                    if cmp.visible() then
                         cmp.confirm({ select = true })
                         return
                     elseif luasnip.jumpable(1) then
