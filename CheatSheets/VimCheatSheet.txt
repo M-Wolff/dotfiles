@@ -112,3 +112,17 @@ sd<sym>         delete <sym> around selection / motion
 sr<sym_old><sym_new>         replace <sym_old> around selection with <sym_new>
 sh<sym>         highlight <sym> surrounding
 # Keep in mind that ( [ { will cause whitespace around surrounding, } ] ) will not.
+############################# Fugitive / gitsigns ##############################
+<leader>gg      open Fugitive menu
+<leader>gb      blame
+<leader>gn      jump to next hunk change
+<leader>gN      jump to prev hunk change
+s               Stage
+u               Unstage
+X               discard changes
+o               open file under cursor in new buffer
+O               open file under cursor in new tab
+( / )           jump to next or previous file/hunk/revision
+cc              commit
+ca              commit amend
+
