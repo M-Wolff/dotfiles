@@ -43,6 +43,8 @@ require("lazy").setup({
 require("matthias.plugins.autopairs"),
 require("matthias.plugins.catppuccin"),
 require("matthias.plugins.comment"),
+require("matthias.plugins.fugitive"),
+require("matthias.plugins.gitsigns"),
 require("matthias.plugins.harpoon"),
 require("matthias.plugins.lsp_signature"),
 require("matthias.plugins.luasnip"),
