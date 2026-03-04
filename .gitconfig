@@ -10,6 +10,6 @@
 [init]
 	defaultBranch = main
 [commit]
-	gpgsign = true
+	gpgSign = true
 [pull]
 	rebase = false
