@@ -125,4 +125,5 @@ O               open file under cursor in new tab
 ( / )           jump to next or previous file/hunk/revision
 cc              commit
 ca              commit amend
+dd              diff split window
 
