@@ -31,43 +31,46 @@ vim.g.mapleader = " "
 -- Bootstrap lazy.nvim if it is not installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git", "clone", "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", lazypath,
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-require("matthias.plugins.autopairs"),
-require("matthias.plugins.catppuccin"),
-require("matthias.plugins.comment"),
-require("matthias.plugins.conform"),
-require("matthias.plugins.fugitive"),
-require("matthias.plugins.gitsigns"),
-require("matthias.plugins.harpoon"),
-require("matthias.plugins.lsp_signature"),
-require("matthias.plugins.luasnip"),
-require("matthias.plugins.mason"),
-require("matthias.plugins.mason-lspconfig"),
-require("matthias.plugins.mason-tool-installer"),
-require("matthias.plugins.markdown-preview"),
-require("matthias.plugins.nvim-cmp"),
-require("matthias.plugins.oil"),
-require("matthias.plugins.surround"),
-require("matthias.plugins.tabout"),
-require("matthias.plugins.telescope"),
-require("matthias.plugins.treesitter"),
-require("matthias.plugins.vimtex"),
-{'ThePrimeagen/vim-be-good'}
+	require("matthias.plugins.autopairs"),
+	require("matthias.plugins.catppuccin"),
+	require("matthias.plugins.comment"),
+	require("matthias.plugins.conform"),
+	require("matthias.plugins.fugitive"),
+	require("matthias.plugins.gitsigns"),
+	require("matthias.plugins.harpoon"),
+	require("matthias.plugins.lsp_signature"),
+	require("matthias.plugins.luasnip"),
+	require("matthias.plugins.mason"),
+	require("matthias.plugins.mason-lspconfig"),
+	require("matthias.plugins.mason-tool-installer"),
+	require("matthias.plugins.markdown-preview"),
+	require("matthias.plugins.nvim-cmp"),
+	require("matthias.plugins.oil"),
+	require("matthias.plugins.surround"),
+	require("matthias.plugins.tabout"),
+	require("matthias.plugins.telescope"),
+	require("matthias.plugins.telescope-file-browser"),
+	require("matthias.plugins.treesitter"),
+	require("matthias.plugins.vimtex"),
+	{ "ThePrimeagen/vim-be-good" },
 })
 
-
 -- ############################### Custom-Commands ################################
-require("matthias.commands.TSInfo")  -- :TSInfo for treesitter info (filetype)
-require("matthias.commands.SeperatorLine")  -- create Seperator Line
-require("matthias.commands.ToggleLineNumbers")  -- toggle line numbers (relative, absolute, off)
+require("matthias.commands.TSInfo") -- :TSInfo for treesitter info (filetype)
+require("matthias.commands.SeperatorLine") -- create Seperator Line
+require("matthias.commands.ToggleLineNumbers") -- toggle line numbers (relative, absolute, off)
 
 -- ################################ Custom-Keymaps ################################
 -- this must be loaded as last position after everything else
