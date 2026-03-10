@@ -56,6 +56,7 @@ require("lazy").setup({
 	require("matthias.plugins.mason-lspconfig"),
 	require("matthias.plugins.mason-tool-installer"),
 	require("matthias.plugins.markdown-preview"),
+	require("matthias.plugins.neogen-docstrings"),
 	require("matthias.plugins.nvim-cmp"),
 	require("matthias.plugins.oil"),
 	require("matthias.plugins.surround"),

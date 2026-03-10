@@ -129,4 +129,5 @@ ca              commit amend
 dd              diff split window
 D               Delete file under cursor
 X               discard changes in file under cursor
-
+############################# Docstrings (Neogen) ##############################
+<leader>d       create docstring for object under cursor (can be class, function, or variable)
