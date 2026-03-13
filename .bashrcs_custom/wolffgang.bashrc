@@ -5,6 +5,7 @@ alias shutdown='for i in {15..1}; do sleep 1 && echo "Shutting down in $i Second
 alias reboot='for i in {15..1}; do sleep 1 && echo "Rebooting in $i Seconds!"; done && sudo reboot'
 alias nvim='/home/m_wolf37/.local/bin/neovim/nvim-linux-x86_64/bin/nvim'
 alias vim='nvim'
+alias opencode='TMPDIR=/home/m_wolf37/.tmp/ opencode'
 
 
 PATH="/home/m_wolf37/.local/bin:$PATH"
@@ -25,3 +26,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f "/home/m_wolf37/.ghcup/env" ] && . "/home/m_wolf37/.ghcup/env" # ghcup-env
+# opencode
+export PATH=/home/m_wolf37/.opencode/bin:$PATH
