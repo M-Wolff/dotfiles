@@ -114,7 +114,7 @@ sr<sym_old><sym_new>         replace <sym_old> around selection with <sym_new>
 sh<sym>         highlight <sym> surrounding
 # Keep in mind that ( [ { will cause whitespace around surrounding, } ] ) will not.
 ############################# Fugitive / gitsigns ##############################
-<leader>g       open Fugitive menu
+<leader>gg       open Fugitive menu
 <leader>gb      blame
 <leader>gn      jump to next hunk change
 <leader>gN      jump to prev hunk change
