@@ -1,0 +1,99 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+
+    "model": "openai/gpt-5.4",
+
+    "provider": {
+        "ollama": {
+            "name": "Ollama (local)",
+            "npm": "@ai-sdk/openai-compatible",
+            "options": {
+                "baseURL": "http://localhost:11434/v1"
+            },
+            "models": {
+                "deepseek-r1:14b-32k": {
+                    "name": "deepseek-r1:14b-32k"
+                },
+                "qwen2.5-coder:7b-32k": {
+                    "name": "qwen2.5-coder:7b-32k"
+                },
+                "qwen2.5-coder:14b-32k": {
+                    "name": "qwen2.5-coder:14b-32k"
+                },
+                "lfm2.5-thinking:1.2b-32k": {
+                    "name": "lfm2.5-thinking:1.2b-32k"
+                },
+                "qwen3.5:9b-32k": {
+                    "name": "qwen3.5:9b-32k"
+                },
+                "qwen3.5:9b": {
+                    "name": "qwen3.5:9b"
+                },
+                "mistral:instruct":{
+                    "name": "mistral:instruct"
+                },
+                "llama3.2:3b-32k":{
+                    "name": "llama3.2:3b-32k"
+                },
+            }
+        }
+    },
+
+    "permission": {
+        "*": "ask",
+
+        "read": "allow",
+        "edit": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow",
+        "todoread": "allow",
+        "todowrite": "allow",
+
+        "webfetch": "deny",
+        "websearch": "deny",
+
+        "bash": {
+            "*": "ask",
+            "git status*": "allow",
+            "git diff*": "allow",
+            "git log*": "allow",
+            "pwd": "allow",
+            "wc *": "allow",
+            "ls*": "allow",
+            "find *": "allow",
+            "grep *": "allow",
+            "rg *": "allow",
+            "cat *": "allow",
+            "rm *": "deny",
+            "sudo *": "deny",
+            "curl *": "deny",
+            "wget *": "deny",
+            "ssh *": "deny",
+            "scp *": "deny",
+            "rsync *": "deny",
+            "docker *": "ask",
+            "podman *": "ask",
+            "npm *": "ask",
+            "pnpm *": "ask",
+            "yarn *": "ask",
+            "bun *": "ask",
+            "python3 -m py_compile *": "allow",
+        },
+
+        "edit": {
+            "*": "allow",
+            ".git/*": "deny",
+            ".env": "deny",
+            ".env.*": "deny",
+            ".ssh/*": "deny",
+            "**/*.pem": "deny",
+            "**/*.key": "deny",
+            "**/id_rsa": "deny",
+            "**/id_ed25519": "deny",
+            "package-lock.json": "ask",
+            "pnpm-lock.yaml": "ask",
+            "yarn.lock": "ask"
+        }
+    }
+}
