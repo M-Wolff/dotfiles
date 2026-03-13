@@ -65,6 +65,7 @@ require("lazy").setup({
 	require("matthias.plugins.telescope-file-browser"),
 	require("matthias.plugins.treesitter"),
 	require("matthias.plugins.vimtex"),
+	require("matthias.plugins.99"),
 	{ "ThePrimeagen/vim-be-good" },
 })
 
