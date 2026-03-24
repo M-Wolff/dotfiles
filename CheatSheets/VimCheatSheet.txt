@@ -102,6 +102,7 @@ gb              Visual Mode comment selection block-wise
 <leader>fb      fuzzy find currently opened buffers
 <leader>fc      fuzzy find in neovim config directory
 <leader>e       open file browser in telescope
+                Alt-d deletes selected entries
 ################################### Harpoon ####################################
 <leader>h       Show Harpoon List (editable like a buffer)
 <leader><Left>  goto previous entry
