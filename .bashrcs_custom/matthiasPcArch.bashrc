@@ -2,6 +2,8 @@
 export PATH="$PATH:/home/matthias/.local/bin"
 # GHCi Haskell
 [ -f "/home/matthias/.ghcup/env" ] && . "/home/matthias/.ghcup/env" # ghcup-env
+# opencode
+export PATH=/home/matthias/.opencode/bin:$PATH
 
 alias vim='nvim'
 # Command for drivehealth
