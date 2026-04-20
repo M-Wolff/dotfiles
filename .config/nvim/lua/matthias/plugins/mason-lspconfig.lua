@@ -5,6 +5,7 @@ return {
 	config = function()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
+				"clangd", -- C / C++
 				"lua_ls", -- LUA
 				"pyright", -- python
 				-- "hls", -- Haskell
