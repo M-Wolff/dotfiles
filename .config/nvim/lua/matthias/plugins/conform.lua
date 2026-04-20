@@ -32,6 +32,8 @@ return {
 
 			-- Python formatting + lint fixing + import sorting
 			python = { "ruff_fix", "ruff_format", "isort" },
+
+			json = { "prettierd" },
 		},
 
 		-- If no external formatter exists, fallback to LSP

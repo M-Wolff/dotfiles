@@ -8,6 +8,7 @@ return {
 				"stylua", -- LUA
 				"ruff", -- Python
 				"isort", -- Import sorting
+				-- "prettierd", -- JSON, Markdown, ... formatter
 			},
 		})
 	end,
