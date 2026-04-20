@@ -14,7 +14,7 @@ return {
 				"jdtls", -- Java
 				"marksman", -- Markdown
 				"texlab", -- LaTeX
-				-- "jsonls", -- JSON language server
+				"jsonls", -- JSON language server
 			},
 		})
 	end,
