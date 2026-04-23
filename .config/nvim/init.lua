@@ -73,6 +73,7 @@ require("lazy").setup({
 require("matthias.commands.TSInfo") -- :TSInfo for treesitter info (filetype)
 require("matthias.commands.SeperatorLine") -- create Seperator Line
 require("matthias.commands.ToggleLineNumbers") -- toggle line numbers (relative, absolute, off)
+require("matthias.commands.Formatter") -- Toggle formatter  on / off
 
 -- ################################ Custom-Keymaps ################################
 -- this must be loaded as last position after everything else

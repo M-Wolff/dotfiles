@@ -34,6 +34,7 @@ return {
 			python = { "ruff_fix", "ruff_format", "isort" },
 
 			json = { "prettierd" },
+			markdown = { "prettierd" },
 		},
 
 		-- If no external formatter exists, fallback to LSP
@@ -42,8 +43,13 @@ return {
 		},
 
 		-- Automatically format files when saving
-		format_on_save = {
-			timeout_ms = 5000,
-		},
+		format_on_save = function(bufnr)
+			if vim.b[bufnr].disable_autoformat then
+				return nil
+			end
+			return {
+				timeout_ms = 5000,
+			}
+		end,
 	},
 }
