@@ -77,5 +77,6 @@ require("matthias.commands.Formatter") -- Toggle formatter  on / off
 
 -- ################################ Custom-Keymaps ################################
 -- this must be loaded as last position after everything else
+require("matthias/custom")
 require("matthias.keymaps/custom")
 require("matthias.keymaps/lsp")

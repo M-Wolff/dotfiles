@@ -35,6 +35,7 @@ return {
 
 			json = { "prettierd" },
 			markdown = { "prettierd" },
+			pseudocode = {},
 		},
 
 		-- If no external formatter exists, fallback to LSP
