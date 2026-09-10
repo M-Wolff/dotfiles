@@ -2,6 +2,12 @@ alias vim='nvim'
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: sda sdb'
 alias todo="vim ~/Sciebo/ToDos.md"
+alias reflector_update="sudo reflector \
+  --country DE \
+  --latest 10 \
+  --protocol https \
+  --sort rate \
+  --save /etc/pacman.d/mirrorlist"
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
