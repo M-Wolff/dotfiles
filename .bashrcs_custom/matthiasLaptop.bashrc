@@ -8,6 +8,7 @@ alias reflector_update="sudo reflector \
   --protocol https \
   --sort rate \
   --save /etc/pacman.d/mirrorlist"
+alias firewall_block="sudo ufw prepend deny from any to any"
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
