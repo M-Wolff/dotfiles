@@ -17,6 +17,7 @@ alias reflector_update="sudo reflector \
   --protocol https \
   --sort rate \
   --save /etc/pacman.d/mirrorlist"
+. /home/matthias/tools/WoL.sh
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
