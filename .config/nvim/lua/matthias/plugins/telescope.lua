@@ -55,5 +55,11 @@ return {
 				hidden = true,
 			})
 		end, { desc = "Find files in nvim config" })
+		vim.keymap.set("n", "<leader>fs", function()
+			require("telescope.builtin").lsp_document_symbols({})
+		end, { desc = "Telescope find Document symbols" })
+		vim.keymap.set("n", "<leader>fw", function()
+			require("telescope.builtin").lsp_dynamic_workspace_symbols()
+		end, { desc = "Telescope find Workspace symbols" })
 	end,
 }
