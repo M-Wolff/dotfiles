@@ -101,6 +101,8 @@ gb              Visual Mode comment selection block-wise
 <leader>fg      grep current cwd
 <leader>fb      fuzzy find currently opened buffers
 <leader>fc      fuzzy find in neovim config directory
+<leader>fs      fuzzy find in current buffer for Document Symbols (function names, ...)
+<leader>fw      fuzzy find in current workspace for Symbols (function names, classes, ...)
 <leader>e       open file browser in telescope
                 Alt-d deletes selected entries
 ################################### Harpoon ####################################
