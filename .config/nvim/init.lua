@@ -57,7 +57,7 @@ require("lazy").setup({
 	require("matthias.plugins.mason-tool-installer"),
 	require("matthias.plugins.markdown-preview"),
 	require("matthias.plugins.neogen-docstrings"),
-	require("matthias.plugins.nvim-cmp"),
+	require("matthias.plugins.nvim-cmp"), -- completion from different sources (path, buffer, ...)
 	require("matthias.plugins.oil"),
 	require("matthias.plugins.surround"),
 	require("matthias.plugins.tabout"),
@@ -65,7 +65,7 @@ require("lazy").setup({
 	require("matthias.plugins.telescope-file-browser"),
 	require("matthias.plugins.treesitter"),
 	require("matthias.plugins.vimtex"),
-	require("matthias.plugins.99"),
+	-- require("matthias.plugins.99"),
 	{ "ThePrimeagen/vim-be-good" },
 })
 
