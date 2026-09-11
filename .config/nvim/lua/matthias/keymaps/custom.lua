@@ -7,3 +7,14 @@ vim.keymap.set("n", "<C-h>", ":noh<CR>", { silent = true })
 vim.keymap.set("n", "<C-l>", ":lua ToggleLineNumbers()<CR>")
 -- Seperator block
 vim.keymap.set("n", "<Leader>l", ":lua SeperatorText()<CR>", { silent = true })
+-- ############################# Search across lines ##############################
+-- make f and F work across lines by default
+vim.keymap.set("n", "f", function()
+	local char = vim.fn.getcharstr()
+	vim.fn.search("\\V" .. vim.fn.escape(char, "\\"))
+end, { desc = "Find char forward across lines" })
+
+vim.keymap.set("n", "F", function()
+	local char = vim.fn.getcharstr()
+	vim.fn.search("\\V" .. vim.fn.escape(char, "\\"), "b")
+end, { desc = "Find char backward across lines" })
