@@ -17,5 +17,15 @@ return {
 				"jsonls", -- JSON language server
 			},
 		})
+
+		vim.lsp.config("pyright", {
+			settings = {
+				python = {
+					analysis = {
+						autoImportCompletions = true,
+					},
+				},
+			},
+		})
 	end,
 }
