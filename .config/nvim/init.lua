@@ -80,3 +80,5 @@ require("matthias.commands.Formatter") -- Toggle formatter  on / off
 require("matthias/custom")
 require("matthias.keymaps/custom")
 require("matthias.keymaps/lsp")
+-- ############################# Custom-Highlighting ##############################
+require("matthias.highlighting.python")
