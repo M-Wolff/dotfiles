@@ -17,7 +17,12 @@ alias reflector_update="sudo reflector \
   --protocol https \
   --sort rate \
   --save /etc/pacman.d/mirrorlist"
-. /home/matthias/tools/WoL.sh
+
+# load WoL script (contains alias definitions)
+WOL_SCRIPT="/home/matthias/tools/WoL.sh"
+if [ -f "$WOL_SCRIPT" ]; then
+    .  "$WOL_SCRIPT"
+fi
 
 ###################### Start ssh-agent once and reuse it #######################
 SSH_ENV="$HOME/.ssh/agent.env"
