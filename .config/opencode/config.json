@@ -59,8 +59,13 @@
   "permission": {
     "*": "ask",
 
-    "read": "allow",
-    "edit": "allow",
+    "read": {
+      "*": "allow",
+      ".env": "deny",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      ".env.example": "allow"
+    },
     "grep": "allow",
     "glob": "allow",
     "list": "allow",
@@ -103,6 +108,7 @@
       ".git/*": "deny",
       ".env": "deny",
       ".env.*": "deny",
+      ".env.example": "allow",
       ".ssh/*": "deny",
       "**/*.pem": "deny",
       "**/*.key": "deny",
