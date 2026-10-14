@@ -5,18 +5,6 @@ export PATH="$PATH:/home/matthias/.local/bin"
 # opencode
 export PATH=/home/matthias/.opencode/bin:$PATH
 
-alias vim='nvim'
-# Command for drivehealth
-alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: nvme0 nvme1 nvme2 sda sdb'
-alias drivestats='sudo smartctl -a'
-alias todo='vim ~/Schreibtisch/todo.txt'
-alias unitodo="vim ~/Sciebo/Uni-Muenster-Sciebo/ToDos.md"
-alias reflector_update="sudo reflector \
-  --country DE \
-  --latest 10 \
-  --protocol https \
-  --sort rate \
-  --save /etc/pacman.d/mirrorlist"
 
 # load WoL script (contains alias definitions)
 WOL_SCRIPT="/home/matthias/tools/WoL.sh"
@@ -42,3 +30,5 @@ if [ -f "$SSH_ENV" ]; then
 else
     start_agent
 fi
+############################# load custom aliases ##############################
+source ~/.bash_aliases_custom/matthiasPcArch.bash_aliases
