@@ -1,13 +1,6 @@
-alias vim='nvim'
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: sda sdb'
 alias todo="vim ~/Sciebo/ToDos.md"
-alias reflector_update="sudo reflector \
-  --country DE \
-  --latest 10 \
-  --protocol https \
-  --sort rate \
-  --save /etc/pacman.d/mirrorlist"
 alias firewall_block="sudo ufw prepend deny from any to any"
 
 ###################### Start ssh-agent once and reuse it #######################
@@ -30,3 +23,5 @@ if [ -f "$SSH_ENV" ]; then
 else
     start_agent
 fi
+############################# load custom aliases ##############################
+source ~/.bash_aliases_custom/matthiasLaptop.bash_aliases
