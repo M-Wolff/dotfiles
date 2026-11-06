@@ -81,4 +81,6 @@ require("matthias/custom")
 require("matthias.keymaps/custom")
 require("matthias.keymaps/lsp")
 -- ############################# Custom-Highlighting ##############################
+require("matthias.highlighting.definitions")
 require("matthias.highlighting.python")
+require("matthias.highlighting.markdown")
