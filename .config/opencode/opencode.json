@@ -1,0 +1,344 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "model": "openai/gpt-6.1-Sol",
+
+  "providers": {
+    "ollama": {
+      "name": "Ollama (local)",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "gemma4:e4b-128k": {
+          "name": "gemma4:e4b-128k"
+        },
+        "deepseek-r1:14b-32k": {
+          "name": "deepseek-r1:14b-32k"
+        },
+        "qwen2.5-coder:7b-32k": {
+          "name": "qwen2.5-coder:7b-32k"
+        },
+        "qwen2.5-coder:14b-32k": {
+          "name": "qwen2.5-coder:14b-32k"
+        },
+        "lfm2.5-thinking:1.2b-32k": {
+          "name": "lfm2.5-thinking:1.2b-32k"
+        },
+        "qwen3.5:9b-32k": {
+          "name": "qwen3.5:9b-32k"
+        },
+        "qwen3.5:9b": {
+          "name": "qwen3.5:9b"
+        },
+        "mistral:instruct": {
+          "name": "mistral:instruct"
+        },
+        "llama3.2:3b-32k": {
+          "name": "llama3.2:3b-32k"
+        }
+      }
+    },
+
+    "university": {
+      "name": "University GPT",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "https://gpt.uni-muenster.de/v1",
+        "apiKey": "{file:~/.config/opencode/unigpt-key.env}"
+      },
+      "models": {
+        "Qwen3.8-27B": {
+          "name": "uniGPT: qwen3.8-27b",
+          "capabilities": {
+            "tools": true,
+            "reasoning": false
+          }
+        },
+
+        "DeepSeek-V4-Flash": {
+          "name": "uniGPT: DeepSeek V4 Flash",
+          "capabilities": {
+            "tools": true,
+            "input": ["text", "image"],
+            "output": ["text"],
+            "reasoning": {
+              "supported": true
+            }
+          },
+          "compatibility": {
+            "reasoningField": "reasoning_content"
+          },
+          "limit": {
+            "context": 128000,
+            "output": 8000
+          }
+        }
+      }
+    }
+  },
+
+  "experimental": {
+    "todo": true
+  },
+
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "ask"
+    },
+
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "ask"
+    },
+
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "read",
+      "resource": ".env",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env.*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": ".env.example",
+      "effect": "allow"
+    },
+
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+
+    {
+      "action": "webfetch",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "websearch",
+      "resource": "*",
+      "effect": "ask"
+    },
+
+    {
+      "action": "shell",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "git status*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git log*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "wc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "find *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "grep *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "rg *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "cat *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "rm *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "sudo *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "curl *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "wget *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "ssh *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "scp *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "rsync *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "docker *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "podman *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "npm *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "yarn *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "bun *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -m py_compile *",
+      "effect": "allow"
+    },
+
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".env",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "*.env",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "*.env.*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".env.example",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": ".ssh/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "**/*.pem",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "**/*.key",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "**/id_rsa",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "**/id_ed25519",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "package-lock.json",
+      "effect": "ask"
+    },
+    {
+      "action": "edit",
+      "resource": "pnpm-lock.yaml",
+      "effect": "ask"
+    },
+    {
+      "action": "edit",
+      "resource": "yarn.lock",
+      "effect": "ask"
+    }
+  ]
+}
