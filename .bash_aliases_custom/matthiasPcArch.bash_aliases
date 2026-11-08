@@ -1,7 +1,7 @@
 # Command for drivehealth
 alias drivehealth='sudo whoami >> /dev/null && parallel sudo smartctl -H /dev/{} ::: nvme0 nvme1 nvme2 sda sdb'
 alias drivestats='sudo smartctl -a'
-alias todo='vim ~/Schreibtisch/todo.txt'
+alias todo='vim ~/Schreibtisch/ToDos.md'
 alias unitodo="vim ~/Sciebo/Uni-Muenster-Sciebo/ToDos.md"
 
 # Backup Aliases
