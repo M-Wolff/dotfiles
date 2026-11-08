@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "catppuccin-macchiato"
+  },
+  "session": {
+    "permissions": "prompt",
+    "grouping": "none"
+  },
+  "debug": { "turn_tokens": "verbose" },
+  "animations": true,
+  "tabs": {
+    "mode": "off",
+    "scope": "cwd"
+  }
+}

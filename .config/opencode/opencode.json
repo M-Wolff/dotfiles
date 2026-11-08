@@ -6,7 +6,7 @@
   "providers": {
     "ollama": {
       "name": "Ollama (local)",
-      "package": "aisdk:@ai-sdk/openai-compatible",
+      "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
         "baseURL": "http://localhost:11434/v1"
       },
@@ -43,7 +43,7 @@
 
     "university": {
       "name": "University GPT",
-      "package": "aisdk:@ai-sdk/openai-compatible",
+      "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
         "baseURL": "https://gpt.uni-muenster.de/v1",
         "apiKey": "{file:~/.config/opencode/unigpt-key.env}"
@@ -53,7 +53,9 @@
           "name": "uniGPT: qwen3.8-27b",
           "capabilities": {
             "tools": true,
-            "reasoning": false
+            "reasoning": {
+              "supported": false
+            }
           }
         },
 
@@ -339,6 +341,7 @@
       "action": "edit",
       "resource": "yarn.lock",
       "effect": "ask"
-    }
+    },
+    { "action": "todowrite", "resource": "*", "effect": "allow" }
   ]
 }
