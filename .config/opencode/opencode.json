@@ -46,7 +46,7 @@
       "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
         "baseURL": "https://gpt.uni-muenster.de/v1",
-        "apiKey": "{file:./unigpt-key.env}"
+        "apiKey": "{file:~/.secrets/unigpt-key.env}"
       },
       "models": {
         "Qwen3.8-27B": {
@@ -123,6 +123,41 @@
       "resource": ".env.example",
       "effect": "allow"
     },
+    {
+      "action": "read",
+      "resource": "~/.ssh/*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.pem",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.key",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "id_rsa",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*/id_rsa",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "id_ed25519",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*/id_ed25519",
+      "effect": "deny"
+    },
 
     {
       "action": "glob",
@@ -153,18 +188,18 @@
     },
     {
       "action": "shell",
-      "resource": "git status*",
+      "resource": "git status *",
       "effect": "allow"
     },
     {
       "action": "shell",
-      "resource": "git diff*",
-      "effect": "allow"
+      "resource": "git diff *",
+      "effect": "ask"
     },
     {
       "action": "shell",
-      "resource": "git log*",
-      "effect": "allow"
+      "resource": "git log *",
+      "effect": "ask"
     },
     {
       "action": "shell",
@@ -178,13 +213,13 @@
     },
     {
       "action": "shell",
-      "resource": "ls*",
+      "resource": "ls *",
       "effect": "allow"
     },
     {
       "action": "shell",
       "resource": "find *",
-      "effect": "allow"
+      "effect": "ask"
     },
     {
       "action": "shell",
@@ -284,6 +319,11 @@
     },
     {
       "action": "edit",
+      "resource": "*/.git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
       "resource": ".env",
       "effect": "deny"
     },
@@ -309,22 +349,37 @@
     },
     {
       "action": "edit",
-      "resource": "**/*.pem",
+      "resource": "~/.ssh/*",
       "effect": "deny"
     },
     {
       "action": "edit",
-      "resource": "**/*.key",
+      "resource": "*.pem",
       "effect": "deny"
     },
     {
       "action": "edit",
-      "resource": "**/id_rsa",
+      "resource": "*.key",
       "effect": "deny"
     },
     {
       "action": "edit",
-      "resource": "**/id_ed25519",
+      "resource": "*/id_rsa",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "*/id_ed25519",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "id_rsa",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "id_ed25519",
       "effect": "deny"
     },
     {
