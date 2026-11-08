@@ -46,7 +46,7 @@
       "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
         "baseURL": "https://gpt.uni-muenster.de/v1",
-        "apiKey": "{file:~/.config/opencode/unigpt-key.env}"
+        "apiKey": "{file:./unigpt-key.env}"
       },
       "models": {
         "Qwen3.8-27B": {
