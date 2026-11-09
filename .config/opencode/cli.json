@@ -12,5 +12,8 @@
   "tabs": {
     "mode": "off",
     "scope": "cwd"
+  },
+  "keybinds": {
+    "agent.cycle": "tab"
   }
 }
