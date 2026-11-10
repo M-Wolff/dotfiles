@@ -306,6 +306,16 @@
       "resource": "python3 -m py_compile *",
       "effect": "allow"
     },
+    {
+      "action": "shell",
+      "resource": "python -c *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -c *",
+      "effect": "ask"
+    },
 
     {
       "action": "edit",
