@@ -407,6 +407,7 @@
       "resource": "yarn.lock",
       "effect": "ask"
     },
-    { "action": "todowrite", "resource": "*", "effect": "allow" }
+    { "action": "todowrite", "resource": "*", "effect": "allow" },
+    { "action": "question", "resource": "*", "effect": "allow" }
   ]
 }
