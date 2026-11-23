@@ -11,32 +11,29 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "gemma4:e4b-128k": {
-          "name": "gemma4:e4b-128k"
+        "gpt-oss:20b": {
+          "name": "Ollama: gpt-oss:20b",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
         },
-        "deepseek-r1:14b-32k": {
-          "name": "deepseek-r1:14b-32k"
-        },
-        "qwen2.5-coder:7b-32k": {
-          "name": "qwen2.5-coder:7b-32k"
-        },
-        "qwen2.5-coder:14b-32k": {
-          "name": "qwen2.5-coder:14b-32k"
-        },
-        "lfm2.5-thinking:1.2b-32k": {
-          "name": "lfm2.5-thinking:1.2b-32k"
+        "qwen3.5:27b-32k": {
+          "name": "Ollama: qwen3.5:27b-32k",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
         },
         "qwen3.5:9b-32k": {
-          "name": "qwen3.5:9b-32k"
-        },
-        "qwen3.5:9b": {
-          "name": "qwen3.5:9b"
-        },
-        "mistral:instruct": {
-          "name": "mistral:instruct"
-        },
-        "llama3.2:3b-32k": {
-          "name": "llama3.2:3b-32k"
+          "name": "Ollama: qwen3.5:9b-32k",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
         }
       }
     },

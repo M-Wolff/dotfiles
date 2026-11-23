@@ -5,7 +5,8 @@
   },
   "session": {
     "permissions": "prompt",
-    "grouping": "none"
+    "grouping": "none",
+    "verbosity": "high"
   },
   "debug": { "turn_tokens": "verbose" },
   "animations": true,
