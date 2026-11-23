@@ -9,6 +9,7 @@
 ## Requirements
 
 - tmux
+  - tmux plugin manager [TPM](https://github.com/tmux-plugins/tpm) at ~/.tmux/plugins/tpm/
 
 ### NeoVim
 
