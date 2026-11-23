@@ -8,3 +8,8 @@
 - Keep attribution proportional. Use one notice at the broadest scope it accurately describes: a section in a document, or a docstring or adjacent comment for a generated class, function, or method. Use an inline comment for a few isolated generated lines only when it helps clarify authorship without adding clutter.
 - When AI and human contributions are interleaved, prefer a single mixed-authorship note for the enclosing block, section, or file over scattered comments. For example: `Mixed authorship: human contributions and AI assistance from OpenCode (<provider>/<model-version>)`. Do not imply that OpenCode wrote the entire block, and do not repeat attribution already covered by a broader notice.
 - Preserve existing author and copyright notices. If a file format does not support comments or author metadata, note the attribution in accompanying documentation rather than altering the format.
+
+## Code comments and Python docstrings
+
+- Comment logical blocks of code so readers can follow what each non-obvious step does and why it is needed. Explain intent, assumptions, and tricky behavior rather than restating individual lines.
+- Give every Python class and method a docstring that explains what it does and when or why to use it. Document each applicable parameter's meaning and expected type; for arrays and tensors, include the expected dtype and shape when relevant. Document constructor parameters in the class or `__init__` docstring, following the project's docstring style.
