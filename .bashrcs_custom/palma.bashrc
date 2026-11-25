@@ -31,7 +31,7 @@ slurm_gpus() {
 	if (match($0,/NodeName=([^ \n]+)/,m)) node=m[1];
 		if (match($0,/Partitions=([^ \n]+)/,m)) parts=m[1];
 			if (match($0,/State=([^ \n]+)/,m)) state=m[1];
-				if (state ~ /DOWN|DRAIN|FAIL|MAINT|RESERVED/) next;
+				if (state ~ /DOWN|DRAIN|FAIL|MAINT|RESERVED|COMPLETING/) next;
 
 	  # Mixed authorship: human contributions and AI assistance from OpenCode (openai/gpt-6.2-sol).
 	  # Shorten common states and keep other flags intact; P means PLANNED, not PENDING.
