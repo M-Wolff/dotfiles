@@ -33,22 +33,35 @@ slurm_gpus() {
 			if (match($0,/State=([^ \n]+)/,m)) state=m[1];
 				if (state ~ /DOWN|DRAIN|FAIL|MAINT|RESERVED/) next;
 
-	    # GPU info
-	    if (match($0,/Gres=([^ \n]+)/,m)) {
-		    gres=m[1];
-		    if (match(gres,/gpu:([^: \n]+):?([0-9]*)/,g)) {
-			    gputype=g[1];
-			    total = (g[2]!="" ? g[2]+0 : 0);
-		    }
-    		}
+	  # Mixed authorship: human contributions and AI assistance from OpenCode (openai/gpt-6.2-sol).
+	  # Shorten common states and keep other flags intact; P means PLANNED, not PENDING.
+	  n=split(state, flags, "+");
+	  state="";
+	  for (i=1; i<=n; i++) {
+		  flag=flags[i];
+		  if (flag ~ /^(MIXED|IDLE|ALLOCATED|PLANNED)$/) flag=substr(flag,1,1);
+		  state=(i==1 ? flag : state "+" flag);
+	  }
 
-	  # GPU allocation
-	  if (match($0,/AllocTRES=[^ \n]*/,a)) {
-		  alloc_tres=a[0];
-		  if (match(alloc_tres,/gres\/gpu=([0-9]+)/,b)) alloc=b[1]+0;
-		  else if (match(alloc_tres,/gpu=([0-9]+)/,b)) alloc=b[1]+0;
+	  # Sum all configured GPU entries, including MIG profiles, to match node-wide AllocTRES.
+	  if (match($0,/Gres=([^ \n]+)/,m)) {
+		  gres=m[1];
+		  gsub(/\([^)]*\)/, "", gres); # Socket lists can contain commas.
+		  n=split(gres, entries, ",");
+		  for (i=1; i<=n; i++) {
+			  if (match(entries[i], /^gpu:(([^:]+):)?([0-9]+)$/, g)) {
+				  type=(g[2]!="" ? g[2] : "gpu");
+				  gputype=(gputype=="" ? type : gputype "," type);
+				  total+=g[3]+0;
+			  }
 		  }
+	  }
 
+	  # Use the aggregate allocation only; typed entries can repeat the same GPUs.
+	  if (match($0,/AllocTRES=([^ \n]*)/,a) &&
+	      match(a[1],/(^|,)(gres\/)?gpu=([0-9]+)(,|$)/,b)) alloc=b[3]+0;
+
+	  # Unallocated is not necessarily schedulable; PLANNED is a future backfill flag.
 	  avail = total - alloc;
 	  if (avail < 0) avail = 0;
 
@@ -69,28 +82,28 @@ slurm_gpus() {
 	# Only keep nodes with GPUs
 	if (total > 0 && gputype != "") {
 		# fixed-width record for sorting and later printing
-		printf "%-8s %-15s %-18s %-10s %5d %9d %9d %9d %9d %9d %9d\n", \
+		printf "%-8s %-15s %-18s %-5s %5d %9d %15d %9d %9d %9d %9d\n", \
 			gputype, parts, node, state, total, alloc, avail, mem_avail, mem_total, cpu_avail, cpu_total;
 		}
 }')
 
-	# Sort by GPU type then available GPUs descending
+	# Sort by partition, then unallocated GPUs descending
 	sorted=$(echo "$nodes" | sort -k2,2 -k7,7nr)
 
 	    # Headers
-	    printf "%-8s %-15s %-18s %-10s %5s %9s %9s %9s %9s %9s %9s\n" \
-		    "GPU Type" "Partition" "Node" "State" "GPUs" "GPU Alloc" "GPU Avail" \
+	    printf "%-8s %-15s %-18s %-5s %5s %9s %15s %9s %9s %9s %9s\n" \
+		    "GPU Type" "Partition" "Node" "State" "GPUs" "GPU Alloc" "GPU Unallocated" \
 		    "MemAvail" "MemTotal" "CPUAvail" "CPUTotal"
-	printf "%-8s %-15s %-18s %-10s %5s %9s %9s %9s %9s %9s %9s\n" \
-		"--------" "---------" "----" "-----" "-----" "---------" "---------" \
+	printf "%-8s %-15s %-18s %-5s %5s %9s %15s %9s %9s %9s %9s\n" \
+		"--------" "---------" "----" "-----" "-----" "---------" "---------------" \
 		"---------" "---------" "---------" "---------"
 
 	prev_partition=""
 	while read -r line; do
 		partition=$(echo "$line" | awk '{print $2}')
 		if [[ "$prev_partition" != "" && "$prev_partition" != "$partition" ]]; then
-			printf "%-8s %-15s %-18s %-10s %5s %9s %9s %9s %9s %9s %9s\n" \
-				"--------" "---------" "------------------" "----------" "-----" "---------" "---------" \
+			printf "%-8s %-15s %-18s %-5s %5s %9s %15s %9s %9s %9s %9s\n" \
+				"--------" "---------" "------------------" "-----" "-----" "---------" "---------------" \
 				"---------" "---------" "---------" "---------"
 		fi
 		echo "$line"
